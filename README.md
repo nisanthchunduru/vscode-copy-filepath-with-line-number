@@ -1,6 +1,8 @@
 # vscode-copy-filepath-with-line-number
 
-VSCode extension to copy current file path with current line number
+VSCode extension to copy current file's full path with current line number
+
+The extension is useful for giving rspec (or a different test runner) the current file's full path along with the current line number
 
 ## Install
 
