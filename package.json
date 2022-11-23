@@ -1,0 +1,66 @@
+{
+	"name": "copy-filepath-with-line-number",
+	"displayName": "Copy current file path with current line number",
+	"description": "Copy current file path with current line number",
+	"version": "0.0.1",
+	"publisher": "nisanth074",
+	"repository": {},
+	"icon": "assets/images/icon.png",
+	"extensionKind": [
+		"workspace"
+	],
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"keywords": [
+		"copy",
+		"file path",
+		"line number",
+		"clipboard"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:copy-filepath-with-line-number"
+	],
+	"main": "./main.js",
+	"contributes": {
+		"keybindings": [
+			{
+				"command": "copy-filepath-with-line-number",
+				"key": "alt+l",
+				"mac": "ctrl+l",
+				"when": "editorTextFocus"
+			}
+		],
+		"commands": [
+			{
+				"command": "copy-filepath-with-line-number",
+				"title": "Copy file path with line number"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"eslint": "^4.11.0",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {},
+	"__metadata": {
+		"publisherId": "93799d83-bccd-66e9-9e2f-a595187dcc9e",
+		"publisherDisplayName": "nisanthchunduru",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1669180514573,
+		"preRelease": false
+	}
+}
