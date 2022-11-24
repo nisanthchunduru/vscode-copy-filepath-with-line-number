@@ -13,7 +13,7 @@ The extension is useful for giving rspec (or a different test runner) the curren
 
 Visit https://marketplace.visualstudio.com/items?itemName=nisanthchunduru.copy-filepath-with-line-number and click the "Install" button
 
-Press Ctrl + l to copy the current file's path and current line number
+Press Alt + l (Ctrl + l on MacOS) to copy the current file's path and current line number
 
 ### Install from source
 
@@ -28,3 +28,7 @@ Install the extension
 ```
 script/install.sh
 ```
+
+## Support
+
+If you run into an issue while installing/using the extension, please report it here https://github.com/nisanthchunduru/vscode-copy-file-path-with-line-number/issues
