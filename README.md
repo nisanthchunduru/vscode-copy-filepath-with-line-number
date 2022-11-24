@@ -32,3 +32,9 @@ script/install.sh
 ## Support
 
 If you run into an issue while installing/using the extension, please report it here https://github.com/nisanthchunduru/vscode-copy-filepath-with-line-number/issues
+
+## FAQ
+
+**Q:** The keyboard shortcut doesn't work on my machine
+
+**A:** Press Cmd + Shift + p (Ctrl + Shift + p on Windows/Linux), search for "Copy current file full path with current line number" and press Enter. If it's successfully copies, a different extension may be overriding this keyboard shortcut. Search for the "Prefereces: Open Keyboard Shortcuts" command and map a keyboard shortcut of your liking to the "Copy current file full path with current line number" command.
