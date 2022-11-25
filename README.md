@@ -20,7 +20,7 @@ Press Alt + l (Ctrl + l on MacOS) to copy the current file's path and current li
 If you'd like to install from source, clone the repo
 
 ```
-git@github.com:nisanthchunduru/vscode-copy-filepath-with-line-number.git
+git clone git@github.com:nisanthchunduru/vscode-copy-filepath-with-line-number.git
 ```
 
 Install the extension
