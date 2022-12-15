@@ -27,7 +27,7 @@ function copyCurrentFilePathWithCurrentLineNumber() {
   }
 
   const path = document.uri.path;
-  const lineNumber = editor.selection.active.line;
+  const lineNumber = editor.selection.active.line + 1;
 
   return `${path}:${lineNumber}`;
 };

@@ -2,7 +2,7 @@
 	"name": "copy-filepath-with-line-number",
 	"displayName": "Copy current file path with current line number",
 	"description": "Copy current file path with current line number",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"publisher": "nisanthchunduru",
 	"repository": {},
 	"icon": "assets/images/icon.png",
