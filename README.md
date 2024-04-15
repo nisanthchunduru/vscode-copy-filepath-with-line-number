@@ -2,7 +2,7 @@
 
 VSCode extension to copy the current file's full path along with the current line number
 
-The extension is useful for giving rspec (or a different test runner) the current file's full path along with the current line number
+The extension is very useful for giving rspec (or a different unit test runner) the current file's full path along with the current line number
 
 <img width="1624" alt="Screenshot 2022-11-25 at 1 58 36 AM" src="https://user-images.githubusercontent.com/1789832/203859512-f357cabf-a85c-4c34-b0b7-6b79e62f0fb7.png">
 
