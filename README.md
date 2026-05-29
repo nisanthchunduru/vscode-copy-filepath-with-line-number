@@ -8,12 +8,16 @@ The extension is very useful for giving an AI agent or a test runner (rspec etc.
 
 <img width="1624" alt="Screenshot 2022-11-25 at 1 56 59 AM" src="https://user-images.githubusercontent.com/1789832/203859452-a7bdf842-93e0-438d-95fc-89da1b199608.png">
 
+## Usage 
+
+- Press `Alt + l` (`Ctrl + l` on MacOS) to copy the current file's **full** path and current line number
+- Press `Alt + Shift + l` (`Ctrl +  Shift + l` on MacOS) to copy the current file's **relative** path and current line number
+
 
 ## Install
 
 Visit https://marketplace.visualstudio.com/items?itemName=nisanthchunduru.copy-filepath-with-line-number and click the "Install" button
 
-Press Alt + l (Ctrl + l on MacOS) to copy the current file's path and current line number
 
 ### Install from source
 

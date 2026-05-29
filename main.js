@@ -11,7 +11,7 @@ class NoTextEditorOpen extends Error {
 class DocumentIsUntitled extends Error {
 }
 
-function copyCurrentFilePathWithCurrentLineNumber() {
+function copyCurrentFilePathWithCurrentLineNumber(relative=false) {
   if (!vscode.workspace.rootPath) {
     throw new NoWorkspaceOpen;
   }
@@ -26,7 +26,10 @@ function copyCurrentFilePathWithCurrentLineNumber() {
     throw new DocumentIsUntitled;
   }
 
-  const path = document.uri.path;
+  let path = document.uri.path;
+  if (relative) {
+    path = vscode.workspace.asRelativePath(path)
+  }
   const lineNumber = editor.selection.active.line + 1;
 
   return `${path}:${lineNumber}`;
@@ -69,7 +72,29 @@ function activate(context) {
     }
   );
 
+  let copyRelativeFilePathWithLineNumberCommand = vscode.commands.registerCommand(
+    "copy-relative-filepath-with-line-number",
+    () => {
+      let filePathWithLineNumber;
+      try {
+        filePathWithLineNumber = copyCurrentFilePathWithCurrentLineNumber(relative=true);
+      } catch (e) {
+        if (e instanceof NoWorkspaceOpen) {
+        } else if (e instanceof NoTextEditorOpen) {
+        } else if (e instanceof DocumentIsUntitled) {
+        } else {
+          throw e;
+        }
+      }
+
+      vscode.env.clipboard.writeText(filePathWithLineNumber).then(() => {
+        toast(`'${filePathWithLineNumber}' copied to clipboard`);
+      });
+    }
+  );
+  
   context.subscriptions.push(copyFilePathWithLineNumberCommand);
+  context.subscriptions.push(copyRelativeFilePathWithLineNumberCommand);
 }
 exports.activate = activate;
 

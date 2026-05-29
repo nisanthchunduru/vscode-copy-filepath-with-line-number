@@ -22,7 +22,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:copy-filepath-with-line-number"
+		"onCommand:copy-filepath-with-line-number",
+		"onCommand:copy-relative-filepath-with-line-number"
 	],
 	"main": "./main.js",
 	"contributes": {
@@ -32,12 +33,22 @@
 				"key": "alt+l",
 				"mac": "ctrl+l",
 				"when": "editorTextFocus"
+			},
+			{
+				"command": "copy-relative-filepath-with-line-number",
+				"key": "alt+shift+l",
+				"mac": "ctrl+shift+l",
+				"when": "editorTextFocus"
 			}
 		],
 		"commands": [
 			{
 				"command": "copy-filepath-with-line-number",
 				"title": "Copy current file full path with current line number"
+			},
+			{
+				"command": "copy-relative-filepath-with-line-number",
+				"title": "Copy current relative file path with current line number"
 			}
 		]
 	},
