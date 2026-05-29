@@ -68,8 +68,30 @@ function activate(context) {
       });
     }
   );
+  let copyFileNameWithLineNumberCommand = vscode.commands.registerCommand(
+    "copy-filename-with-line-number",
+    () => {
+      let fileNameWithLineNumber;
+      try {
+        let pathWithLineNumber = copyCurrentFilePathWithCurrentLineNumber();
+        fileNameWithLineNumber = pathWithLineNumber.split('/').pop()
+      } catch (e) {
+        if (e instanceof NoWorkspaceOpen) {
+        } else if (e instanceof NoTextEditorOpen) {
+        } else if (e instanceof DocumentIsUntitled) {
+        } else {
+          throw e;
+        }
+      }
+
+      vscode.env.clipboard.writeText(fileNameWithLineNumber).then(() => {
+        toast(`'${fileNameWithLineNumber}' copied to clipboard`);
+      });
+    }
+  );
 
   context.subscriptions.push(copyFilePathWithLineNumberCommand);
+  context.subscriptions.push(copyFileNameWithLineNumberCommand);
 }
 exports.activate = activate;
 
